@@ -6,7 +6,7 @@ const projects = await getCollection('projects');
 
 <Layout title="Projects">
   <main>
-    <h1>Projektit</h1>
+    <h1>Projects</h1>
     {projects.map(p => <p>{p.data.title}</p>)}
   </main>
 </Layout>
