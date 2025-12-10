@@ -7,14 +7,14 @@ public_folder: "/images/uploads"
 
 collections:
   - name: "blog"
-    label: "Blogi"
+    label: "Blog"
     folder: "src/content/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "../../layouts/BlogPost.astro"}
-      - {label: "Otsikko", name: "title", widget: "string"}
-      - {label: "Julkaisupäivä", name: "pubDate", widget: "datetime"}
-      - {label: "Kuvaus", name: "description", widget: "text"}
-      - {label: "Kansikuva", name: "heroImage", widget: "image", required: false}
-      - {label: "Leipäteksti", name: "body", widget: "markdown"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publishing date", name: "pubDate", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Image", name: "heroImage", widget: "image", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
