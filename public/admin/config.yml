@@ -18,3 +18,29 @@ collections:
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Image", name: "heroImage", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "projects"
+    label: "Projects"
+    folder: "src/content/projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Project name", name: "title", widget:  "string"}
+      - {label: "Publishing date", name: "pubDate", widget:  "datetime"}
+      - {label: "Image", name: "image", widget:  "image"}
+      - {label: "Short description", name: "description", widget:  "text"}
+      - {label: "GitHub link", name: "repoUrl", widget:  "string", required: false}
+      - {label: "Live Demo", name: "demoUrl", widget:  "string", required: false}
+      - {label: "Longer description", name: "body", widget:  "markdown"}
+  - name: "data"
+    label: "Data & Settings"
+    files:
+      - name: "techstack"
+        label: "Tech Stack"
+        file: "src/content/data/techstack.json"
+        fields:
+          - label: "Skills"
+            name: "items"
+            widget: "list"
+            fields:
+              - {label: "Tech Name", name: "name", widget: "string"}
+              - {label: "Logo", name: "icon", widget: "image"}
