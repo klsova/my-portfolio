@@ -11,9 +11,9 @@ import Section from '@/components/home/Section.astro'
 import SkillLayout from '@/components/home/SkillLayout.astro'
 import config from '@/site-config'
 
-const languages = ['Html', 'JavaScript', 'CSS', 'Shell']
-const frontend = ['TypeScript', 'Vite', 'Webpack', 'Astro']
-const backend = ['Vercel', 'Waline']
+const languages = ['Python', 'R' , 'Rust' , 'Java', 'HTML', 'JavaScript', 'CSS']
+const frontend = ['TypeScript', "React", 'Node.js' ,'Vite', 'Webpack', 'Astro']
+const backend = ['Quarkus', 'Vercel', 'Netlify', 'Express']
 
 const MAX_POSTS = 10
 const allPosts = await getBlogCollection()
@@ -43,43 +43,34 @@ if (!images[imagePath])
       <div class='flex flex-col items-center gap-y-4'>
         <h1 class='text-3xl font-medium'>{config.author}</h1>
         <div class='flex flex-wrap justify-center gap-x-7 gap-y-3'>
-          <Label title='Somewhere'>
+          <Label title='Turku, Finland'>
             <Icon name='location' class='size-5' slot='icon' />
           </Label>
           <Label
-            title='Source code'
+            title='GitHub'
             as='a'
-            href='https://github.com/cworld1/astro-theme-pure'
+            href='https://github.com/klsova'
             target='_blank'
           >
             <Icon name='github' class='size-5' slot='icon' />
           </Label>
+          <Label
+            title="LinkedIn"
+            as="a"
+            href="https://www.linkedin.com/in/kalle-sova-5b4616292/"
+            target="_blank"
+            >
+            <Icon name="link" class="size-5" slot="icon" />
+          </Label>
         </div>
       </div>
-
-      {/* Get template */}
-      <a
-        href='https://github.com/cworld1/astro-theme-pure'
-        target='_blank'
-        class='flex flex-row items-center gap-x-3 rounded-full border bg-background px-4 py-2 text-sm shadow-sm transition-shadow hover:shadow-md'
-      >
-        <span class='relative flex items-center justify-center'>
-          <span
-            class='absolute size-2 animate-ping rounded-full border border-green-400 bg-green-400 opacity-75'
-          ></span>
-          <span class='size-2 rounded-full bg-green-400'></span>
-        </span>
-        <p class='font-medium text-muted-foreground'>Get Template</p>
-      </a>
     </section>
 
     <div id='content' class='animate flex flex-col gap-y-10 md:w-4/5 lg:w-5/6'>
       <Section title='About'>
-        <p class='text-muted-foreground'>Developer / Designer</p>
+        <p class='text-muted-foreground'>Student / Developer</p>
         <p class='text-muted-foreground'>
-          Lorem ipsum dolor sit amet, vidit suscipit at mei. Quem denique mea id. Usu ei regione
-          indoctum dissentiunt, cu meliore fuisset mei, vel quod voluptua ne. Ex dicat impedit mel,
-          at eum oratio possit voluptatum.
+          Hello! I am Kalle, a master's student from Turku. I am currently studying Information and Communication Technologies in University of Turku with my major in Data-Analytics. My passion is in fullstack web-development and AI/ML engineering.
         </p>
         <Button title='More about me' class='w-fit self-end' href='/about' variant='ahead' />
       </Section>
@@ -130,10 +121,27 @@ if (!images[imagePath])
       <Section title='Education'>
         <Card
           as='a'
-          heading='Lorem ipsum'
-          subheading='Lorem ipsum dolor sit amet, vidit suscipit at mei.'
-          date='August 2021 - July 2025'
-          href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+          heading='University of Turku'
+          subheading='Data-Analytics, Information and Communication Technologies, Master of Science'
+          date='August 2025 - July 2027 (Current)'
+          href='https://www.utu.fi/en/study-at-utu/masters-degree-programme-in-information-and-communication-technology-data-analytics'
+        >
+          {
+            /* <ul class='ms-4 list-disc text-muted-foreground'>
+          <li>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore debitis recusandae, ut
+            molestiae laboriosam pariatur!
+          </li>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, pariatur!</li>
+        </ul> */
+          }
+        </Card>  
+        <Card
+          as='a'
+          heading='University of Turku'
+          subheading='Information and Communication Technologies, Bachelor of Science'
+          date='August 2022 - July 2025'
+          href='https://www.utu.fi/en/study-at-utu/bachelors-degree-programme-in-information-and-communication-technology'
         >
           {
             /* <ul class='ms-4 list-disc text-muted-foreground'>
