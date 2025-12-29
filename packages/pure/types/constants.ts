@@ -17,6 +17,5 @@ export const socialLinks = [
   'zhihu',
   'coolapk',
   'netease',
-  'LinkedIn',
   'link'
 ] as const
